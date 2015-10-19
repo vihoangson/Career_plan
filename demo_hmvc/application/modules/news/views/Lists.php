@@ -1,8 +1,6 @@
 <?php $this->load->view('_includes/header'); ?>
-					<div class="col-md-10 col-lg-10">
-						<center><img src="http://max-koder.com/wp-content/uploads/2015/09/patternhmvc.png"></center>
-						<center><img src="http://gyazo.cybridge.jp/gyazo/da/02/47/da02474e69b7a37aca70096321bc2de8.png"></center>
-						<a href="/news/action/add" class="btn btn-success"><span class="glyphicon glyphicon-add" aria-hidden="true"></span> Thêm mới</a>
+					<div class="col-md-12 col-lg-12">
+						<a href="<?= base_url(); ?>news/action/add" class="btn btn-success"><span class="glyphicon glyphicon-add" aria-hidden="true"></span> Thêm mới</a>
 						<hr>
 						<div class="panel panel-primary">
 							<div class="panel-heading">
@@ -27,20 +25,13 @@
 												<td><?php echo $value["news_title"] ?></td>
 												<td><?php echo $value["news_content"] ?></td>
 												<td><?php echo $value["news_cat"] ?></td>
-												<td><a href="/news/action/edit<?php echo $value["news_id"] ?>">Sửa</a> | <a href="/news/action/delete/<?php echo $value["news_id"] ?>">Xóa</a></td>
+												<td><a href="<?= base_url(); ?>news/action/edit/<?php echo $value["news_id"] ?>">Sửa</a> | <a href="<?= base_url(); ?>news/action/delete/<?php echo $value["news_id"] ?>">Xóa</a></td>
 											</tr>
 											<?php
 										}
 										?>
 									</tbody>
 								</table>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-2 col-lg-2">
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<img src="http://placehold.it/100x100" style="width:100%">
 							</div>
 						</div>
 					</div>

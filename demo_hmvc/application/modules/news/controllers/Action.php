@@ -29,6 +29,10 @@ class Action extends CI_Controller {
 		<?php
 		//dd($this->input->post('txt_title'));
 	}
+
+	public function add(){
+		
+	}
 }
 
 /* End of file Action.php */

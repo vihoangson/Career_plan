@@ -1,4 +1,4 @@
-<?php 
+<?php
 require("assets/class/plugin.php");
  ?>
 <!DOCTYPE html>
@@ -42,10 +42,10 @@ require("assets/class/plugin.php");
 
 				<div class="content_div">
 
-					<a href="https://github.com/vihoangson/"><img src="assets/github-logo.png"></a>
+					<a href="https://github.com/vihoangson/Career_plan" target="_blank"><img src="assets/github-logo.png"></a>
 
 					<div class="list-group">
-						<a href="hmvc" class="list-group-item">
+						<a href="demo_hmvc" class="list-group-item">
 							<h4 class="list-group-item-heading">HMVC</h4>
 							<p class="list-group-item-text">Hierarchy of parent-child MCV layers</p>
 						</a>
