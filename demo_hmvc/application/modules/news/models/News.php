@@ -6,7 +6,7 @@ class News extends CI_Model {
 
 	private $_tn = "news";
 	private $_pk = "news_id";
-	public function IUNews($data){
+	public function IU($data){
 		$this->db->where($this->_pk,$data[$this->_pk]);
 		if($this->db->count_all_results($this->_tn)==0){
 			//insert

@@ -35,7 +35,7 @@ class Action extends CI_Controller {
 		$data["news_id"]      = $this->input->post('txt_id');
 		$data["news_title"]   = $this->input->post('txt_title');
 		$data["news_content"] = $this->input->post('txt_content');
-		if($this->News->IUNews($data)){
+		if($this->News->IU($data)){
 			redirect('/','refresh');
 		}else{
 			redirect('/404','refresh');
