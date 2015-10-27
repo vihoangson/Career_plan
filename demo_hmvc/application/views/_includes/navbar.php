@@ -5,10 +5,10 @@
 			<a href="#">Home</a>
 		</li>
 		<li>
-			<a href="/news/">News</a>
+			<a href="<?= base_url(); ?>news/">News</a>
 		</li>
 		<li>
-			<a href="/user/">User</a>
+			<a href="<?= base_url(); ?>user/">User</a>
 		</li>
 	</ul>
 </nav>

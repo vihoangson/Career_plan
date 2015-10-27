@@ -19,5 +19,5 @@
 		<body>
 			<?php $this->load->view('_includes/navbar.php'); ?>
 			<div class="container" style="margin-top:51px;">
-				<h1> User </h1>
+				<h1> HMVC </h1>
 				<div class="row">
