@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 5.5.45, for Linux (x86_64)
+--
+-- Host: localhost    Database: hmvc
+-- ------------------------------------------------------
+-- Server version	5.5.45
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `news` (
+  `news_id` int(11) NOT NULL AUTO_INCREMENT,
+  `news_title` varchar(1600) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `news_content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `news_cat` int(11) NOT NULL,
+  PRIMARY KEY (`news_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `news`
+--
+
+LOCK TABLES `news` WRITE;
+/*!40000 ALTER TABLE `news` DISABLE KEYS */;
+INSERT INTO `news` VALUES (1,'value22222 5555234','value2333 3333234234  23422 3234 234234234234 23 423423',1),(2,'value3333333','value3333323423 23 42342342323 232 2 34 234 234 ',0),(3,'234253','234123412',0),(4,'0=0 \" select * from news \' 0=0','ádfasdgadử        wwwwwwwwww 222222222 22222222 ádasd',0),(5,'3333333333333331412412    ádas','412412 da asda sd ád',0);
+/*!40000 ALTER TABLE `news` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2015-10-27 12:05:41
