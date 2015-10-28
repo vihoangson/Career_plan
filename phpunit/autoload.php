@@ -1,4 +1,5 @@
 <?php
+require ("vendor/autoload.php");
 /**
  * An example of a project-specific implementation.
  * 

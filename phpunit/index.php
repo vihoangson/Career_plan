@@ -56,7 +56,6 @@ echo $mm->doAction();
 					<img src="https://lh3.googleusercontent.com/-XyXQHJewDOk/VjAhg1I_x9I/AAAAAAAAAS4/T5hSrqZcEtU/s2048-Ic42/%25255BUNSET%25255D.png">
 				</a>
 			</center>
-
 		</div>
 		<!-- jQuery -->
 
