@@ -1,6 +1,19 @@
 <?php
-//require("assets/class/plugin.php");
- ?>
+require "autoload.php";
+use CareerPlan\MyClass;
+use CareerPlan\MyComponent\MyClass2;
+use CareerPlan\MyComponent\MyClass2 as Single;
+
+$m = new MyClass;
+echo $m->function1();
+
+$mmm = new MyClass2;
+echo $mmm->doAction();
+
+$mm = new Single;
+echo $mm->doAction();
+
+?>
 <!DOCTYPE html>
 <html lang="vi">
 	<head>

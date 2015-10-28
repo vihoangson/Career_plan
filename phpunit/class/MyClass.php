@@ -1,5 +1,5 @@
 <?php 
-namespace Myalasdkfjasdl;
+namespace CareerPlan;
 class MyClass
 {
 	function function1(){
