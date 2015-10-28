@@ -1,8 +1,12 @@
 <?php
 require "autoload.php";
 use CareerPlan\MyClass;
+use CareerPlan\MyComponent\MyClass as MyClassTmp;
 use CareerPlan\MyComponent\MyClass2;
 use CareerPlan\MyComponent\MyClass2 as Single;
+
+$sss = new MyClassTmp;
+echo $sss->function1();
 
 $m = new MyClass;
 echo $m->function1();
