@@ -7,7 +7,7 @@ class Lists extends MX_Controller {
 
 	public function index()
 	{
-		$this->load->model('news/get_list');
+		$this->load->model('get_list');
 		$data_list = ($this->get_list->get_all());
 		$data = array(
 			"data_list" => $data_list

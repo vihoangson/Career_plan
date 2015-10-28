@@ -1,6 +1,6 @@
 <?php $this->load->view('_includes/header'); ?>
 					<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-						<a class="btn btn-default" href="<?= base_url(); ?>user/action/add">Add news</a>
+						<a class="btn btn-success" href="<?= base_url(); ?>user/action/add">Add user</a>
 						<hr>
 						<div class="panel panel-primary">
 							<div class="panel-heading">

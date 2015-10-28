@@ -52,5 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'news/lists';
 $route['news'] = 'news/lists';
 $route['user'] = 'user/lists';
+$route['document'] = 'document/detail';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

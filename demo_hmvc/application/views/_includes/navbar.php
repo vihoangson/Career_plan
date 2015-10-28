@@ -1,14 +1,17 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<a class="navbar-brand" href="#">Title</a>
+	<a class="navbar-brand" href="<?= base_url(); ?>../">Homepage Career plan</a>
 	<ul class="nav navbar-nav">
-		<li class="active">
-			<a href="#">Home</a>
-		</li>
 		<li>
-			<a href="<?= base_url(); ?>news/">News</a>
+			<a href="<?= base_url(); ?>">Home</a>
 		</li>
-		<li>
+		<li class="">
+			<a href="<?= base_url(); ?>news/" >News</a>
+		</li>
+		<li class="">
 			<a href="<?= base_url(); ?>user/">User</a>
+		</li>
+		<li class="">
+			<a href="<?= base_url(); ?>document/">Document</a>
 		</li>
 	</ul>
 </nav>

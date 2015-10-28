@@ -27,7 +27,7 @@ require("assets/class/plugin.php");
 			width:100%;
 			height:100%;
 			background: url("assets/gears.gif") no-repeat center center white;
-
+			z-index: 1;
 		}
 		</style>
 	</head>
@@ -50,12 +50,8 @@ require("assets/class/plugin.php");
 							<p class="list-group-item-text">Hierarchy of parent-child MCV layers</p>
 						</a>
 						<a href="sql_injection" class="list-group-item">
-							<h4 class="list-group-item-heading">Sql injection</h4>
-							<p class="list-group-item-text">Mô hình nhóm MVC độc lập</p>
-						</a>
-						<a href="Xss" class="list-group-item">
-							<h4 class="list-group-item-heading">XSS</h4>
-							<p class="list-group-item-text">Mô hình nhóm MVC độc lập</p>
+							<h4 class="list-group-item-heading">Security</h4>
+							<p class="list-group-item-text">SQL injection, XSS, CSRF ...</p>
 						</a>
 						<a href="phpunit" class="list-group-item">
 							<h4 class="list-group-item-heading">Phpunit</h4>
@@ -64,7 +60,33 @@ require("assets/class/plugin.php");
 					</div>
 
 				</div>
+				<div class="panel panel-info">
+					  <div class="panel-heading">
+							<h3 class="panel-title">Ebook đã đoc</h3>
+					  </div>
+					  <div class="panel-body">
+							<div class="row">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<img src="assets/images/1.png">
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<img src="assets/images/2.png">
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<img src="assets/images/3.png">
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<img src="assets/images/4.png">
+								</div>
 
+							</div>
+					  </div>
+				</div>
+
+				<div class="well">
+					<a href="https://drive.google.com/folderview?id=0ByYM1xZ-Eo6CMEhXUTB4bjFnZHc&usp=sharing"> Link ebook </a>
+				</div>
+			
 				<center>
 					<img src="assets/Career-image.png">
 				</center>
