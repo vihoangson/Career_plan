@@ -19,16 +19,20 @@ use CareerPlan\DictionaryAPI\FindWord;
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		<style>
-		#screen{
-			display: block;
-			position:fixed;
-			top:0;
-			left:0;
-			width:100%;
-			height:100%;
-			background: url("../assets/gears.gif") no-repeat center center white;
-			z-index: 1;
-		}
+			#screen{
+				display: block;
+				position:fixed;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background: url("../assets/gears.gif") no-repeat center center white;
+				z-index: 1;
+			}
+			.loadding_ajax{
+				position: absolute;
+				right: 30px;
+			}
 		</style>
 	</head>
 	<body>
@@ -38,7 +42,7 @@ use CareerPlan\DictionaryAPI\FindWord;
 			</ul>
 		</div>
 		<div id="screen"></div>
-		<div class="container">
+		<div class="container" style="position:relative;">
 			<div class="well">
 				<center><img src="https://lh3.googleusercontent.com/-fB-t-QpcFNo/VjHFGEpWiiI/AAAAAAAAAUk/31ncshIAXfg/s2048-Ic42/%25255BUNSET%25255D.png"></center>
 				<h3><a href="http://www.dictionaryapi.com/">Homepage</a></h3>
@@ -48,7 +52,7 @@ use CareerPlan\DictionaryAPI\FindWord;
 						<h3 class="panel-title">Dictionary API</h3>
 				  </div>
 				  <div class="panel-body">
-					<form action="" method="POST" role="form">
+					<form action="" method="POST" role="form" class="form_search">
 						<legend>Dictionary API</legend>
 						<div class="form-group">
 							<label for="">Word</label>
@@ -56,52 +60,10 @@ use CareerPlan\DictionaryAPI\FindWord;
 						</div>
 						<button type="submit" class="btn btn-primary">Search</button>
 					</form>
+					<div class="loadding_ajax" style="display:none;"><img src="../assets/gears.gif"></div>
+					<div class="result"></div>
 					<?php 
-							$api = new FindWord;
-							$word = $_POST["txt_key"];
-							if($word){
-								echo "<h1>$word</h1>";
-								$data = $api->api_english($word);
-								$wav = $data->entry->sound->wav;
-								$fw = substr($wav, 0,1);
-								$link = "http://media.merriam-webster.com/soundc11/$fw/$wav";
-								if($link){
-									echo "
-										<audio autoplay class='audioplay'>
-											<source src='$link' type='audio/wav'>
-											Your browser does not support the audio element.
-										</audio>
-										<p><button class=' btn btn-default button_p'>Repeat</button></p>
-									";
-									echo "<h4>".$data->entry->hw."</h4>";
-									echo "<h4>".$data->entry->pr."</h4>";
-									echo "<ul>";
-									foreach ((array)$data->entry->def->dt as $key => $value) {
-										echo "<li>".$value."</li>";
-									}
-									echo "</ul>";
-								?>
-									<p><a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a></p>
-									<div class="modal fade" id="modal-id">
-										<div class="modal-dialog">
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-													<h4 class="modal-title">Modal title</h4>
-												</div>
-												<div class="modal-body">
-													<pre><?php echo htmlentities(var_dump($data)); ?></pre>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-													<button type="button" class="btn btn-primary">Save changes</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								<?php
-								}
-							}
+
 					 ?>
 				  </div>
 			</div>
@@ -113,9 +75,33 @@ use CareerPlan\DictionaryAPI\FindWord;
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script>
+
 		$(document).ready(function() {
-			$(".button_p").click(function(){
-				$(".audioplay")[0].play();
+			$(".form_search").submit(function(){
+				$.ajax({
+					url: 'ajax_load.php',
+					type: 'POST',
+					dataType: 'html',
+					data: $(".form_search").serialize(),
+					beforeSend: function(){
+						$(".loadding_ajax").fadeIn(300);
+					}
+				})
+				.done(function(data) {
+					$(".loadding_ajax").fadeOut(300);
+					$(".result").html(data);
+					$(".button_p").click(function(){
+						$(".audioplay")[0].play();
+					});
+				})
+				.fail(function() {
+					console.log("error");
+				})
+				.always(function() {
+					console.log("complete");
+				});
+				
+				return false;
 			});
 		});
 		$(window).load(function(){
