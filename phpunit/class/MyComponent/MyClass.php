@@ -3,7 +3,7 @@ namespace CareerPlan\MyComponent;
 class MyClass
 {
 	function function1(){
-		return "string___";
+		return "<h3>CareerPlan/MyComponent/MyClassMock/function1</h3>";
 	}
 }
 ?>

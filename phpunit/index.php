@@ -47,28 +47,63 @@ use CareerPlan\MyComponent\MyClass2 as Single;
 				<a href="https://phpunit.de/" target="_blank">
 					<img src="https://lh3.googleusercontent.com/-XyXQHJewDOk/VjAhg1I_x9I/AAAAAAAAAS4/T5hSrqZcEtU/s2048-Ic42/%25255BUNSET%25255D.png">
 				</a>
+				<h2> Source code </h2>
+				<p><a href="https://github.com/vihoangson/Career_plan/tree/master/phpunit" target="_blank"><img src="../assets/github-logo.png"></a></p>
 			</center>
 
 <hr>
 <?php
+echo '
+<h3>Sử dụng autoload và use namespace</h3>
+<pre>
+'.
+htmlentities('
+	<?php
+	require "autoload.php";
+	use CareerPlan\MyClass;
+	use CareerPlan\MyComponent\MyClass as MyClassTmp;
+	use CareerPlan\MyComponent\MyClass2;
+	use CareerPlan\MyComponent\MyClass2 as Single;
+	?>
+')
+.'
+</pre>
+';
+
+echo "<pre>".htmlentities('
+
+	$sss = new MyClassTmp;
+	echo $sss->function1();
+	echo "<hr>";
+
+')."</pre>";
 		$sss = new MyClassTmp;
 		echo $sss->function1();
 		echo "<hr>";
+echo "<pre>".htmlentities('
 
-		$m = new MyClass;
-		echo $m->function1();
-		echo "<hr>";
+	$m = new MyClass;
+	echo $m->function1();
+	echo "<hr>";
 
-
-		echo "<hr>";
-
-		echo $data[0]->entry->pr;
-		echo "<hr>";
-
+')."</pre>";
+	$m = new MyClass;
+	echo $m->function1();
+	echo "<hr>";
+echo "<pre>".htmlentities('
+	$mmm = new MyClass2;
+	echo $mmm->doAction();
+	echo "<hr>";
+')."</pre>";
 		$mmm = new MyClass2;
 		echo $mmm->doAction();
 		echo "<hr>";
+echo "<pre>".htmlentities('
 
+	$mm = new Single;
+	echo $mm->doAction();
+	echo "<hr>";
+')."</pre>";
 		$mm = new Single;
 		echo $mm->doAction();
 		echo "<hr>";
