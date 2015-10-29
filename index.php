@@ -61,6 +61,10 @@ require("assets/class/plugin.php");
 							<h4 class="list-group-item-heading">Dictionary API</h4>
 							<p class="list-group-item-text"></p>
 						</a>
+						<a href="GoogleAPI" class="list-group-item">
+							<h4 class="list-group-item-heading">Google API</h4>
+							<p class="list-group-item-text"></p>
+						</a>
 					</div>
 
 				</div>
