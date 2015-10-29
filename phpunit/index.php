@@ -4,19 +4,6 @@ use CareerPlan\MyClass;
 use CareerPlan\MyComponent\MyClass as MyClassTmp;
 use CareerPlan\MyComponent\MyClass2;
 use CareerPlan\MyComponent\MyClass2 as Single;
-
-$sss = new MyClassTmp;
-echo $sss->function1();
-
-$m = new MyClass;
-echo $m->function1();
-
-$mmm = new MyClass2;
-echo $mmm->doAction();
-
-$mm = new Single;
-echo $mm->doAction();
-
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -49,6 +36,11 @@ echo $mm->doAction();
 		</style>
 	</head>
 	<body>
+		<div class="navbar">
+			<a class="navbar-brand" href="../">Career plan homepage</a>
+			<ul class="nav navbar-nav">
+			</ul>
+		</div>
 		<div id="screen"></div>
 		<div class="container">
 			<center>
@@ -56,6 +48,32 @@ echo $mm->doAction();
 					<img src="https://lh3.googleusercontent.com/-XyXQHJewDOk/VjAhg1I_x9I/AAAAAAAAAS4/T5hSrqZcEtU/s2048-Ic42/%25255BUNSET%25255D.png">
 				</a>
 			</center>
+
+<hr>
+<?php
+		$sss = new MyClassTmp;
+		echo $sss->function1();
+		echo "<hr>";
+
+		$m = new MyClass;
+		echo $m->function1();
+		echo "<hr>";
+
+
+		echo "<hr>";
+
+		echo $data[0]->entry->pr;
+		echo "<hr>";
+
+		$mmm = new MyClass2;
+		echo $mmm->doAction();
+		echo "<hr>";
+
+		$mm = new Single;
+		echo $mm->doAction();
+		echo "<hr>";
+
+ ?>
 		</div>
 		<!-- jQuery -->
 
@@ -69,5 +87,6 @@ echo $mm->doAction();
 		</script>
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 	</body>
 </html>

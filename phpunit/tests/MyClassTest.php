@@ -26,28 +26,22 @@ class MyClassTest extends PHPUnit_Framework_TestCase
 	}
 
 	public function testUserEmail(){
-		$user = self::userMockery("mail@cybridge.jp","adfasdf");
-		$this->assertTrue(is_array($user->getUsername()),"Is not array");
+		//$user = self::userMockery("mail@cybridge.jp","Mr.Santo");
+		$user = self::userMock("mail@cybridge.jp","Mr.Santo");
+		$this->assertEquals($user->getUsername(), "Mr.Santo");
+		$this->assertEquals($user->getEmail(), "mail@cybridge.jp");
 	}
 
-	public function tes_tStub()
+	public function userMock($demoEmail,$demoUsername)
 	{
-        // Create a stub for the SomeClass class.
-		$stub = $this->getMockBuilder('sfgsdfgdf')
-		->setMethods(array('update'))
-		->getMock();
-
-		$stub->method('update')
-		->willReturn('foo33');
-        // Configure the stub.
-		$stub->method('doSomething')
-		->willReturn('foo');
-		$stub->method('doSomething2')
-		->willReturn('foo');
-
-        // Calling $stub->doSomething() will now return
-        // 'foo'.
-		$this->assertEquals('foo', $stub->update());
+		$user = $this->getMockBuilder('SantoSan')
+				->setMethods(array('getUsername','getEmail'))
+				->getMock();
+		$user->method('getUsername')
+			->willReturn($demoUsername);
+		$user->method('getEmail')
+			->willReturn($demoEmail);
+		return $user;
 	}
 }
 
