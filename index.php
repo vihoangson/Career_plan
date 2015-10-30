@@ -65,14 +65,19 @@ require("assets/class/plugin.php");
 							<h4 class="list-group-item-heading">Google API</h4>
 							<p class="list-group-item-text"></p>
 						</a>
+						<a href="demo_array.php" class="list-group-item">
+							<h4 class="list-group-item-heading">Demo array</h4>
+							<p class="list-group-item-text"></p>
+						</a>
+						
 					</div>
 
 				</div>
 				<div class="panel panel-info">
-					  <div class="panel-heading">
-							<h3 class="panel-title">Ebook đã đoc</h3>
-					  </div>
-					  <div class="panel-body">
+					<div class="panel-heading">
+						<h3 class="panel-title">Ebook đã đoc</h3>
+					</div>
+					<div class="panel-body">
 							<div class="row">
 								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 									<img src="assets/images/1.png">
@@ -86,15 +91,24 @@ require("assets/class/plugin.php");
 								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 									<img src="assets/images/4.png">
 								</div>
-
 							</div>
-					  </div>
+							<hr>
+							<div class="row">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<a href="https://drive.google.com/a/cybridge.jp/folderview?id=0ByYM1xZ-Eo6Cdkh1ZWlmbzBIWDA&usp=sharing&tid=0ByYM1xZ-Eo6CMEhXUTB4bjFnZHc"><img src="assets/images/5.png"></a>
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<img src="assets/images/6.png">
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+							</div>
+					</div>
 				</div>
 
 				<div class="well">
-					<a href="https://drive.google.com/folderview?id=0ByYM1xZ-Eo6CMEhXUTB4bjFnZHc&usp=sharing"> Link ebook </a>
+					<h2><a href="https://drive.google.com/folderview?id=0ByYM1xZ-Eo6CMEhXUTB4bjFnZHc&usp=sharing"> Link ebook </a></h2>
 				</div>
-			
 				<center>
 					<img src="assets/Career-image.png">
 				</center>
