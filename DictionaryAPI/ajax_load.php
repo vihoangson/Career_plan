@@ -20,9 +20,7 @@ use CareerPlan\DictionaryAPI\FindWord;
 			echo "<h4>".$data->entry->hw."</h4>";
 			echo "<h4>".$data->entry->pr."</h4>";
 			echo "<ul>";
-			foreach ((array)$data->entry->def->dt as $key => $value) {
-				echo "<li>".$value."</li>";
-			}
+			echo "<li>".($data->entry->def->dt)."</li>";
 			echo "</ul>";
 		?>
 			<p><a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a></p>

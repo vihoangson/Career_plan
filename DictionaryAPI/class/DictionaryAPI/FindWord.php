@@ -15,7 +15,7 @@ class FindWord
 
 	function api_english($word){
 		if(!$word) return false;
-		$xdef = self::grab_xml_definition($word, "sd4", "fe121941-f0c7-4b4c-a43f-28a522f6e774");
+		$xdef = self::grab_xml_definition($word,  "learners", "8d097dd0-9e82-4484-abf9-404a999e3c1b");
 		return simplexml_load_string($xdef);
 	}
 }
