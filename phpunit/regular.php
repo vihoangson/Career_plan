@@ -1,3 +1,7 @@
+<?php 
+require "autoload.php";
+	use CareerPlan\Regular;
+ ?>
 <!DOCTYPE html>
 <html lang="vi">
 	<head>
@@ -20,12 +24,13 @@
 		<div class="navbar">
 			<a class="navbar-brand" href="../">Career plan homepage</a>
 			<ul class="nav navbar-nav">
+				<li><a href="index.php">Go back</a></li>
 			</ul>
 		</div>
 		<div class="container">
 			<?php 
 				ob_start();
-				require "text.php";
+				require "regular_text_sample.php";
 				$string = ob_get_contents();
 				ob_end_clean();
 
@@ -37,7 +42,7 @@
 				  </div>
 				  <div class="panel-body">
 				  <?php 
-					preg_match_all("/[\"\']((http:\/\/|https:\/\/).+?(\.jpg))[\"\']/",$string,$match,true );
+					$match = Regular::get_all_link($string);
 					echo "<pre>";
 					var_dump($match[1]);
 					echo "</pre>";

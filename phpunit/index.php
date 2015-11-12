@@ -54,6 +54,7 @@ use CareerPlan\MyComponent\MyClass2 as Single;
 <hr>
 <?php
 echo '
+
 <h3>Sử dụng autoload và use namespace</h3>
 <pre>
 '.
@@ -109,6 +110,8 @@ echo "<pre>".htmlentities('
 		echo "<hr>";
 
  ?>
+ <h3>Bài tập về Regular expression</h3>
+<p><a href="regular.php" class="btn btn-warning">Click here »</a></p>
 		</div>
 		<!-- jQuery -->
 

@@ -65,15 +65,10 @@ require("assets/class/plugin.php");
 							<h4 class="list-group-item-heading">Google API</h4>
 							<p class="list-group-item-text"></p>
 						</a>
-						<a href="demo_array.php" class="list-group-item">
-							<h4 class="list-group-item-heading">Demo array</h4>
+						<a href="contenteditable" class="list-group-item">
+							<h4 class="list-group-item-heading">Content Editable HTML5</h4>
 							<p class="list-group-item-text"></p>
 						</a>
-						<a href="regular_expression/" class="list-group-item">
-							<h4 class="list-group-item-heading">Regular expression</h4>
-							<p class="list-group-item-text"></p>
-						</a>
-						
 					</div>
 
 				</div>
