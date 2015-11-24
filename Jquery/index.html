@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jquery</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.box{
+				background: #ccc;
+				width:100px;
+				height:150px;
+			}
+			.dragmmm1{
+				z-index: 2;
+			}
+			.dragmmm2{
+				background: #ddd;
+				width:400px;
+				height:400px;
+			}
+			.hover_div{
+				background: #9E9E9E;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar">
+			<a class="navbar-brand" href="../">Career plan homepage</a>
+			<ul class="nav navbar-nav">
+			</ul>
+		</div>
+		<div class="container">
+			<div class="dragmmm1 box" >Drag me 1</div>
+			<div class="dragmmm2 box" contenteditable="true">Drag me 2</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<script src="js/drag.js"></script>
+		<script>
+			$(".dragmmm1").mouseup(function(event) {
+				$(this).checkInside($(".dragmmm2"));
+			});
+			$.fn.checkInside = function(opt) {
+				if(
+					($(this).offset().left > opt.offset().left && $(this).offset().left < (opt.offset().left+opt.width())) &&
+					($(this).offset().top > opt.offset().top && $(this).offset().top < (opt.offset().top+opt.height()))
+				){
+					opt.addClass('hover_div');
+				}else{
+					opt.removeClass('hover_div');
+				}
+			}
+			$(".dragmmm1").drags();
+		</script>
+		<!-- Bootstrap JavaScript -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</body>
+</html>

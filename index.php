@@ -69,6 +69,10 @@ require("assets/class/plugin.php");
 							<h4 class="list-group-item-heading">Content Editable HTML5</h4>
 							<p class="list-group-item-text"></p>
 						</a>
+						<a href="Jquery" class="list-group-item">
+							<h4 class="list-group-item-heading">Jquery draggable</h4>
+							<p class="list-group-item-text"></p>
+						</a>
 					</div>
 
 				</div>

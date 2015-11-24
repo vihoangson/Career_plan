@@ -42,6 +42,7 @@
 						<p><textarea name="txt_name" class="form-control"></textarea></p>
 						<p><button class="btn btn-primary" type="submit">Submit</button></p>
 					</form>
+					<div class="well"><?php echo htmlentities('<div id="mydiv" contenteditable="true" style="border:1px solid #ccc;"></div>') ?></div>
 					<h3 class="well"> #mydiv just a div, you can paste HTML code to below box </h3>
 					<div id="mydiv" contenteditable="true" style="border:1px solid #ccc;"></div>
 		</div>
